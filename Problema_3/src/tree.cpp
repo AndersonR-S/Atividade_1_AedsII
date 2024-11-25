@@ -13,7 +13,6 @@ No* tree::insert(No* raiz, string palavra) {
     return raiz;
 }
 
-
 void coletarSugestoes(No* raiz, const string& prefixo, vector<string>& suggestions) {
     if (raiz == nullptr) {
         return;
@@ -24,14 +23,6 @@ void coletarSugestoes(No* raiz, const string& prefixo, vector<string>& suggestio
 
     coletarSugestoes(raiz->left, prefixo, suggestions);
     coletarSugestoes(raiz->right, prefixo, suggestions);
-}
-
-void tree::mostraOrdemCrescente(No* raiz) {
-    if (raiz != nullptr) {
-        mostraOrdemCrescente(raiz->left);
-        cout << raiz->palavra <<endl;
-        mostraOrdemCrescente(raiz->right);
-    }
 }
 
 vector<string> tree::autocomplete(No* raiz, const string& prefixo) {

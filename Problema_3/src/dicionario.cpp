@@ -43,7 +43,6 @@ Dicionario::Dicionario(string nomeArquivo) {
 void Dicionario::sugestoes(string prefixo) {
     tree *arvore = new tree();
 
-
     transform(prefixo.begin(), prefixo.end(), prefixo.begin(), [](unsigned char c) {
             return std::tolower(c);
         });

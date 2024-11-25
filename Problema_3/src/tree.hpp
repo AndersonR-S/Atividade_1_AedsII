@@ -21,7 +21,6 @@ public:
 
     No* insert(No* root, string palavra);
     vector<string> autocomplete(No* raiz, const string& prefixo);
-    void mostraOrdemCrescente(No* raiz);
 
 };
 #endif
